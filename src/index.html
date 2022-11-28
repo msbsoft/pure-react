@@ -10,6 +10,17 @@
 <body>
     <div id="root">React not rendered</div>
     <script src="https://unpkg.com/react@16.8.6/umd/react.development.js" ></script>
-    <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js"></script>    
+    <script src="https://unpkg.com/react-dom@16.8.6/umd/react-dom.development.js"></script>
+    
+    <script>
+        const App = () => {
+            return (
+                React.createElement("div", {},
+                    React.createElement("h1", {}, "React Now Rendered!!"))
+            )      
+        }
+
+        ReactDOM.render(React.createElement(App), document.getElementById('root'))
+    </script>
 </body>
 </html>
